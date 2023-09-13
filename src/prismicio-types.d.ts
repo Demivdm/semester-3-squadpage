@@ -66,21 +66,72 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-interface NavDocumentData {}
+/**
+ * Content for squadmembers documents
+ */
+interface SquadmembersDocumentData {
+  /**
+   * name field in *squadmembers*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  name: prismic.RichTextField;
+
+  /**
+   * memberImage field in *squadmembers*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.memberimage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  memberimage: prismic.ImageField<never>;
+
+  /**
+   * horoscope field in *squadmembers*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.horoscope
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  horoscope: prismic.RichTextField;
+
+  /**
+   * age field in *squadmembers*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.age
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  age: prismic.NumberField;
+}
 
 /**
- * nav document from Prismic
+ * squadmembers document from Prismic
  *
- * - **API ID**: `nav`
- * - **Repeatable**: `false`
+ * - **API ID**: `squadmembers`
+ * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NavDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<Simplify<NavDocumentData>, "nav", Lang>;
+export type SquadmembersDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<SquadmembersDocumentData>,
+    "squadmembers",
+    Lang
+  >;
 
-export type AllDocumentTypes = HomeDocument | NavDocument;
+export type AllDocumentTypes = HomeDocument | SquadmembersDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -95,8 +146,8 @@ declare module "@prismicio/client" {
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
-      NavDocument,
-      NavDocumentData,
+      SquadmembersDocument,
+      SquadmembersDocumentData,
       AllDocumentTypes,
     };
   }

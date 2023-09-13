@@ -1,0 +1,50 @@
+{
+  "id": "squadmembers",
+  "label": "squadmembers",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "StructuredText",
+        "config": {
+          "label": "name",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "memberimage": {
+        "type": "Image",
+        "config": {
+          "label": "memberImage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "horoscope": {
+        "type": "StructuredText",
+        "config": {
+          "label": "horoscope",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "age": {
+        "type": "Number",
+        "config": {
+          "label": "age",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
