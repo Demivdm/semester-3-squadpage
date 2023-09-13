@@ -6,15 +6,28 @@
   
     export let data
     let members = data.list
-  </script>
-
+    console.log(data )
+ 
+ </script>
 
 <section>
   <!-- //for each loop svelte syntax// -->
   {#each members as member }
-    {@html prismic.asHTML(member.data.name)}
-{@html prismic.asHTML(member.data.horoscope)}
+  <article class="members-card">
+   <h2>{@html prismic.asHTML(member.data.name)}</h2> 
+   <p>Leeftijd: {(member.data.age)}</p> 
+   <p>{(member.data.horoscope)}</p>
+   <p>{@html prismic.asHTML(member.data.namefavoriteCodeLanguage)}</p>
+</article>
 {/each}
-  <!-- <button><a href="/prisoners">See other ---</a></button> -->
+
 
 </section>
+
+<style>
+.members-card{
+  border: 1px solid black;
+  margin: 1em auto;
+}
+
+</style>

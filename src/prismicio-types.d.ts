@@ -158,15 +158,40 @@ interface SquadmembersDocumentData {
   memberimage: prismic.ImageField<never>;
 
   /**
+   * horoscopeImage field in *squadmembers*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.horoscopeimage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  horoscopeimage: prismic.ImageField<never>;
+
+  /**
    * horoscope field in *squadmembers*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: squadmembers.horoscope
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  horoscope: prismic.RichTextField;
+  horoscope: prismic.SelectField<
+    | "Ram"
+    | "Stier"
+    | "Tweelingen"
+    | "Kreeft"
+    | "Leeuw"
+    | "Maagd"
+    | "Weegschaal"
+    | "Schorpioen"
+    | "Slangendrager"
+    | "Boogschutter"
+    | "Steenbok"
+    | "Waterman"
+    | "Vissen"
+  >;
 
   /**
    * age field in *squadmembers*
@@ -178,6 +203,40 @@ interface SquadmembersDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   age: prismic.NumberField;
+
+  /**
+   * favoriteCodeLanguage field in *squadmembers*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.favoritecodelanguage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  favoritecodelanguage: prismic.RichTextField;
+
+  /**
+   * squad field in *squadmembers*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: squadmembers.squad
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  squad: prismic.BooleanField;
+
+  /**
+   * ProfielCardLink field in *squadmembers*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.profielcardlink
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profielcardlink: prismic.LinkField;
 }
 
 /**

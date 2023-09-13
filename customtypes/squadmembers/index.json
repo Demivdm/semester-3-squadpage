@@ -29,13 +29,34 @@
           "thumbnails": []
         }
       },
+      "horoscopeimage": {
+        "type": "Image",
+        "config": {
+          "label": "horoscopeImage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "horoscope": {
-        "type": "StructuredText",
+        "type": "Select",
         "config": {
           "label": "horoscope",
           "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "options": [
+            "Ram",
+            "Stier",
+            "Tweelingen",
+            "Kreeft",
+            "Leeuw",
+            "Maagd",
+            "Weegschaal",
+            "Schorpioen",
+            "Slangendrager",
+            "Boogschutter",
+            "Steenbok",
+            "Waterman",
+            "Vissen"
+          ]
         }
       },
       "age": {
@@ -43,6 +64,32 @@
         "config": {
           "label": "age",
           "placeholder": ""
+        }
+      },
+      "favoritecodelanguage": {
+        "type": "StructuredText",
+        "config": {
+          "label": "favoriteCodeLanguage",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "squad": {
+        "type": "Boolean",
+        "config": {
+          "label": "squad",
+          "placeholder_false": "Squad A",
+          "placeholder_true": "Squad B",
+          "default_value": false
+        }
+      },
+      "profielcardlink": {
+        "type": "Link",
+        "config": {
+          "label": "ProfielCardLink",
+          "placeholder": "",
+          "select": null
         }
       }
     }
