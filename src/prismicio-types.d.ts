@@ -67,6 +67,71 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 /**
+ * Content for Horoscoperad documents
+ */
+interface HoroscoperadDocumentData {
+  /**
+   * title field in *Horoscoperad*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscoperad.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * zodiacicon field in *Horoscoperad*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscoperad.zodiacicon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  zodiacicon: prismic.ImageField<never>;
+
+  /**
+   * explanationtext field in *Horoscoperad*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscoperad.explanationtext
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  explanationtext: prismic.KeyTextField;
+
+  /**
+   * horoscopecard field in *Horoscoperad*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscoperad.horoscopecard
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  horoscopecard: prismic.ImageField<never>;
+}
+
+/**
+ * Horoscoperad document from Prismic
+ *
+ * - **API ID**: `horoscoperad`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HoroscoperadDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<HoroscoperadDocumentData>,
+    "horoscoperad",
+    Lang
+  >;
+
+/**
  * Content for squadmembers documents
  */
 interface SquadmembersDocumentData {
@@ -131,7 +196,10 @@ export type SquadmembersDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomeDocument | SquadmembersDocument;
+export type AllDocumentTypes =
+  | HomeDocument
+  | HoroscoperadDocument
+  | SquadmembersDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -146,6 +214,8 @@ declare module "@prismicio/client" {
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
+      HoroscoperadDocument,
+      HoroscoperadDocumentData,
       SquadmembersDocument,
       SquadmembersDocumentData,
       AllDocumentTypes,
