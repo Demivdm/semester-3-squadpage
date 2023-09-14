@@ -25,9 +25,8 @@
 
 <style>
   .members-card {
-      border-style: solid;
-      border-width: 1px;
-      border-color: var(--gold);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--gold);
   }
-
 </style>
