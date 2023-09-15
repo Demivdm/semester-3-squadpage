@@ -1,0 +1,30 @@
+{
+  "id": "members",
+  "type": "SharedSlice",
+  "name": "Members",
+  "description": "Members",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "squadmembers": {
+          "type": "Link",
+          "config": {
+            "label": "squadmembers",
+            "select": "document",
+            "customtypes": [
+              "squadmembers",
+              "horoscoperad"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

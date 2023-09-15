@@ -1,0 +1,29 @@
+{
+  "id": "horoscope_rad",
+  "type": "SharedSlice",
+  "name": "HoroscopeRad",
+  "description": "HoroscopeRad",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "rads": {
+          "type": "Link",
+          "config": {
+            "label": "rads",
+            "select": "document",
+            "customtypes": [
+              "horoscoperad"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

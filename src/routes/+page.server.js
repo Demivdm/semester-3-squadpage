@@ -1,11 +1,19 @@
 import { createClient } from '$lib/prismicio'
 
+export const prerender = true;
+
 export async function load({ fetch, request}) {
   const client = createClient({ fetch, request })
-//   console.log(params)
-  const document = await client.getAllByType('squadmembers')
-  // const horoscope = await client.getAllByType('Horoscoperads')
-  
 
-  return {'list':document}
-}
+  const document = await client.getByUID('home', 'home', {'fetchLinks': ['squadmembers.name', 'squadmembers.horoscope', 'squadmembers.age', 'squadmembers.memberimage','squadmembers.horoscopeimage', 'squadmembers.favoritecodelanguage', 'squadmembers.squad', 'squadmembers.profielcardlink']})
+
+  return document.data
+  }
+
+
+  
+      // return {'list':document}
+      //   console.log(params)
+      // const document = await client.getAllByType('squadmembers')
+      // const horoscope = await client.getAllByType('Horoscoperads')
+      

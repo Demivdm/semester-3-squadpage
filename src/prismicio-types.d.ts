@@ -4,14 +4,25 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomeDocumentDataSlicesSlice = never;
+type HomeDocumentDataSlicesSlice = MembersSlice | HoroscopeRadSlice;
 
 /**
- * Content for Home documents
+ * Content for home documents
  */
 interface HomeDocumentData {
   /**
-   * Slice Zone field in *Home*
+   * titel field in *home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.titel
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titel: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *home*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -21,7 +32,7 @@ interface HomeDocumentData {
    */
   slices: prismic.SliceZone<HomeDocumentDataSlicesSlice>
   /**
-   * Meta Description field in *Home*
+   * Meta Description field in *home*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
@@ -32,7 +43,7 @@ interface HomeDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Home*
+   * Meta Image field in *home*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -43,7 +54,7 @@ interface HomeDocumentData {
   meta_image: prismic.ImageField<never>;
 
   /**
-   * Meta Title field in *Home*
+   * Meta Title field in *home*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
@@ -55,7 +66,7 @@ interface HomeDocumentData {
 }
 
 /**
- * Home document from Prismic
+ * home document from Prismic
  *
  * - **API ID**: `home`
  * - **Repeatable**: `false`
@@ -64,7 +75,7 @@ interface HomeDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
+  prismic.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 /**
  * Content for Horoscoperad documents
@@ -260,6 +271,98 @@ export type AllDocumentTypes =
   | HoroscoperadDocument
   | SquadmembersDocument;
 
+/**
+ * Primary content in *HoroscopeRad → Items*
+ */
+export interface HoroscopeRadSliceDefaultItem {
+  /**
+   * rads field in *HoroscopeRad → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscope_rad.items[].rads
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  rads: prismic.ContentRelationshipField<"horoscoperad">;
+}
+
+/**
+ * Default variation for HoroscopeRad Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HoroscopeRadSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<HoroscopeRadSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *HoroscopeRad*
+ */
+type HoroscopeRadSliceVariation = HoroscopeRadSliceDefault;
+
+/**
+ * HoroscopeRad Shared Slice
+ *
+ * - **API ID**: `horoscope_rad`
+ * - **Description**: HoroscopeRad
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HoroscopeRadSlice = prismic.SharedSlice<
+  "horoscope_rad",
+  HoroscopeRadSliceVariation
+>;
+
+/**
+ * Primary content in *Members → Items*
+ */
+export interface MembersSliceDefaultItem {
+  /**
+   * squadmembers field in *Members → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: members.items[].squadmembers
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  squadmembers: prismic.ContentRelationshipField<
+    "squadmembers" | "horoscoperad"
+  >;
+}
+
+/**
+ * Default variation for Members Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<MembersSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Members*
+ */
+type MembersSliceVariation = MembersSliceDefault;
+
+/**
+ * Members Shared Slice
+ *
+ * - **API ID**: `members`
+ * - **Description**: Members
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSlice = prismic.SharedSlice<
+  "members",
+  MembersSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -278,6 +381,14 @@ declare module "@prismicio/client" {
       SquadmembersDocument,
       SquadmembersDocumentData,
       AllDocumentTypes,
+      HoroscopeRadSlice,
+      HoroscopeRadSliceDefaultItem,
+      HoroscopeRadSliceVariation,
+      HoroscopeRadSliceDefault,
+      MembersSlice,
+      MembersSliceDefaultItem,
+      MembersSliceVariation,
+      MembersSliceDefault,
     };
   }
 }
