@@ -81,34 +81,8 @@
     font-family: "Elsie";
     display: inline-block;
     text-decoration: none;
-    /* -webkit-transition: all 200ms ease 0s;
-    -moz-transition: all 200ms ease 0s;
-    -ms-transition: all 200ms ease 0s;
-    -o-transition: all 200ms ease 0s;
-    transition: all 200ms ease 0s;
-    -webkit-appearance: none;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased; */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-  /* .button {
-    font-family: "Elsie";
-    padding: 0.7em;
-    width: 135px;
-    height: 35px;
-    /* background: rgb(202, 162, 82); */
-  /* background: linear-gradient(
-          90deg,
-          rgba(225, 194, 83, 1) 0%,
-          rgba(255, 231, 183, 1) 50%,
-          rgba(225, 194, 83, 1) 100%
-        );
-        color: var(--darkblue);
-        border-style: solid;
-        border-width: 1px;
-        border-color: var(--darkblue);
-      } */
 </style>
