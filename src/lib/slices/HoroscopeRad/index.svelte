@@ -8,10 +8,16 @@
 <section
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
->
+>  <article>hiii</article>
  {#each slice.items as item}
 
- <div><a href="#">{item.rads.data.title[0].text}</a> </div>
+ <a href="/{item.rads.slug}">
+  <div>
+    <p>{item.rads.data.title[0].text}</p>
+  
+    <img src="{item.rads.data.zodiacicon.url }" alt="{item.rads.data.title[0].text}" width="60" height="60">
+  </div>
+</a> 
 
  {/each}
 </section>
@@ -26,58 +32,64 @@ section{
     -webkit-animation:spin 12s linear infinite;
     -moz-animation:spin 12s linear infinite;
     animation:spin 12s linear infinite;
+    /* background-color: aqua; */
+    
 }
-div{
+a{
     display: flex;
     justify-content: center;
     position: absolute;
+    text-decoration: none;
     width: 0;
     height: 30%;
     border-style: solid;
     transform-origin: bottom center;
     transform: rotate(0deg);
     text-align: center;
-    background-color: aqua;
     cursor: pointer;
     border: none;
     padding: 3em;
     color: white  ;
+    border-top: 20px solid var(--gold);
+    border-right:solid 20px transparent;
+    border-bottom:solid 20px transparent;
+    border-left:solid 20px transparent;
 }
-div:nth-child(1) {
+a:nth-child(1) {
 transform: rotate(5deg);
 z-index: 9999;
 }
-div:nth-child(2) {
+a:nth-child(2) {
 transform: rotate(60deg);
 }
-div:nth-child(3) {
+a:nth-child(3) {
     transform: rotate(90deg);
 }
-div:nth-child(4) {
+a:nth-child(4) {
     transform: rotate(120deg); 
 }
-div:nth-child(5) {
+a:nth-child(5) {
     transform: rotate(150deg); 
 }
-div:nth-child(6) {
+a:nth-child(6) {
     transform: rotate(180deg); 
 }
-div:nth-child(7) {
+a:nth-child(7) {
     transform: rotate(210deg);
 }
-div:nth-child(8) {
+a:nth-child(8) {
     transform: rotate(240deg); 
 }
-div:nth-child(9) {
+a:nth-child(9) {
     transform: rotate(270deg); 
 }
-div:nth-child(10) {
+a:nth-child(10) {
     transform: rotate(300deg); 
 }
-div:nth-child(11) {
+a:nth-child(11) {
     transform: rotate(330deg);
 }
-div:nth-child(12) {
+a:nth-child(12) {
     transform: rotate(33deg); 
 }
 @-moz-keyframes spin { 

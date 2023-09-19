@@ -22,6 +22,17 @@ interface HomeDocumentData {
   titel: prismic.RichTextField;
 
   /**
+   * intro field in *home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.intro
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  intro: prismic.RichTextField;
+
+  /**
    * Slice Zone field in *home*
    *
    * - **Field Type**: Slice Zone
