@@ -124,8 +124,8 @@
   }
 
   .front-of-card{
-   /* position: absolute;
-   z-index: 1; */
+   position: absolute;
+   z-index: 1;
    
   }
 
