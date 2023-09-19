@@ -1,15 +1,17 @@
 <script>
   /** @type {import("@prismicio/client").Content.MembersSlice} */
   export let slice;
-  console.log(slice);
-</script>
+ </script>
 
 <section class="member-cards"
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
 >
+<!-- <h1>hoi </h1> -->
   {#each slice.items as item}
-
+<section>
+  <div>{item.rads}</div>
+</section>
     <section class="member-card">
      <div class="inner-card">
       <section class="front-of-card">
@@ -38,7 +40,7 @@
         >
       </div>
      
-  </div>
+  </div>  
 </section>
   {/each}
 </section>
@@ -50,6 +52,7 @@
     --offwhite: #fffbea;
     --lightblue: #062968;
     background: url(sterren-achtergrond.jpg);
+   /* background-repeat: no-repeat; */
   }
 
   h1,

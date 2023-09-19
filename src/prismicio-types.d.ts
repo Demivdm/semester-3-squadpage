@@ -371,7 +371,9 @@ export interface HoroscopeRadSliceDefaultItem {
    * - **API ID Path**: horoscope_rad.items[].rads
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  rads: prismic.ContentRelationshipField<"horoscoperad">;
+  rads: prismic.ContentRelationshipField<
+    "horoscoperad" | "horoscopeintroduction"
+  >;
 }
 
 /**
