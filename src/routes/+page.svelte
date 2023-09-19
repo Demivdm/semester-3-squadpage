@@ -26,9 +26,9 @@
       <p>{@html prismic.asHTML(member.data.namefavoriteCodeLanguage)}</p>
       <button>Visitekaartje</button>
     </article>
-  {/each}
+  {/each} -->
 
-
+<!-- 
 <style>
   .members-card {
     border-style: solid;

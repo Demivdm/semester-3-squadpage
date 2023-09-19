@@ -10,19 +10,28 @@
 >
   {#each slice.items as item}
     <article class="member-card">
-      <h2>{item.squadmembers.data.name[0].text}</h2>
-      <img
-        src={item.squadmembers.data.memberimage.url}
-        alt={item.squadmembers.data.name[0].text}
-      />
-      <img
-        src={item.squadmembers.data.horoscopeimage.url}
-        alt={item.squadmembers.data.horoscope}
-      />
-      <p>{item.squadmembers.data.age}</p>
-      <p>{item.squadmembers.data.horoscope}</p>
-      <p>{item.squadmembers.data.favoritecodelanguage[0].text}</p>
-      <a href={item.squadmembers.data.profielcardlink}>Visitekaartje</a>
+     <div class="inner-card">
+      <section class="back-of-card">
+        <h2>{item.squadmembers.data.name[0].text}</h2>
+        <div class="top-card-img">
+          <img
+          src={item.squadmembers.data.memberimage.url}
+          alt={item.squadmembers.data.name[0].text}
+        />
+        </div>
+          
+       
+        <p>{item.squadmembers.data.age}</p>
+        <p>{item.squadmembers.data.horoscope}</p>
+        <p>{item.squadmembers.data.favoritecodelanguage[0].text}</p>
+        <a href={item.squadmembers.data.profielcardlink}>Visitekaartje</a>
+      </div>
+      </section>
+      
+     <img class="front-of-card"
+      src={item.squadmembers.data.horoscopeimage.url}
+      alt={item.squadmembers.data.horoscope}
+    />
     </article>
   {/each}
 </section>
@@ -64,4 +73,31 @@
     border-width: 1px;
     border-color: var(--darkblue);
   }
+
+  .member-card{
+    display: flex;
+  }
+
+  .back-of-card{
+    height: 423px;
+    width: 234px;
+  }
+ .top-card-img{
+  
+  overflow: hidden;
+  width:100%;
+  height: 40%;
+  }
+  .top-card-img img{
+     
+    width: 100%;
+    position: relative;
+    top: -2em;
+  }
+
+  .front-of-card{
+    position: absolute;
+  }
+
+
 </style>
