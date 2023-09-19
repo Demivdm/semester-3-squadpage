@@ -4,13 +4,19 @@
   console.log(slice);
 </script>
 
-<section
+<section class="member-cards"
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
 >
   {#each slice.items as item}
-    <article class="member-card">
+    <section class="member-card">
      <div class="inner-card">
+      <section class="front-of-card">
+        <img class="front-of-card"
+      src={item.squadmembers.data.horoscopeimage.url}
+      alt={item.squadmembers.data.horoscope}
+    />
+      </section>
       <section class="back-of-card">
         <h2>{item.squadmembers.data.name[0].text}</h2>
         <div class="top-card-img">
@@ -20,19 +26,15 @@
         />
         </div>
           
-       
-        <p>{item.squadmembers.data.age}</p>
-        <p>{item.squadmembers.data.horoscope}</p>
-        <p>{item.squadmembers.data.favoritecodelanguage[0].text}</p>
-        <a href={item.squadmembers.data.profielcardlink}>Visitekaartje</a>
-      </div>
-      </section>
-      
-     <img class="front-of-card"
-      src={item.squadmembers.data.horoscopeimage.url}
-      alt={item.squadmembers.data.horoscope}
-    />
-    </article>
+       <ul>
+        <li>{item.squadmembers.data.age}</li>
+        <li>{item.squadmembers.data.horoscope}</li>
+        <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
+       </ul>
+       <a href={item.squadmembers.data.profielcardlink}>Visitekaartje</a>
+     
+  </div>
+</section>
   {/each}
 </section>
 
@@ -74,9 +76,14 @@
     border-color: var(--darkblue);
   }
 
-  .member-card{
+  .member-cards{
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 40vw;
+    margin: auto;
   }
+
 
   .back-of-card{
     height: 423px;
@@ -96,7 +103,9 @@
   }
 
   .front-of-card{
-    position: absolute;
+   position: absolute;
+   z-index: 1;
+   
   }
 
 
