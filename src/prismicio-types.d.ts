@@ -78,6 +78,93 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 /**
+ * Content for HoroscopeIntroduction documents
+ */
+interface HoroscopeintroductionDocumentData {
+  /**
+   * title field in *HoroscopeIntroduction*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscopeintroduction.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * horoscopeImage field in *HoroscopeIntroduction*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscopeintroduction.horoscopeimage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  horoscopeimage: prismic.ImageField<never>;
+
+  /**
+   * horoscopeTitle field in *HoroscopeIntroduction*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscopeintroduction.horoscopetitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  horoscopetitle: prismic.RichTextField;
+
+  /**
+   * aboutHoroscope field in *HoroscopeIntroduction*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscopeintroduction.abouthoroscope
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  abouthoroscope: prismic.KeyTextField;
+
+  /**
+   * moreStudents field in *HoroscopeIntroduction*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscopeintroduction.morestudents
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  morestudents: prismic.RichTextField;
+
+  /**
+   * memberImage field in *HoroscopeIntroduction*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horoscopeintroduction.memberimage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  memberimage: prismic.ImageField<never>;
+}
+
+/**
+ * HoroscopeIntroduction document from Prismic
+ *
+ * - **API ID**: `horoscopeintroduction`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HoroscopeintroductionDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<HoroscopeintroductionDocumentData>,
+    "horoscopeintroduction",
+    Lang
+  >;
+
+/**
  * Content for Horoscoperad documents
  */
 interface HoroscoperadDocumentData {
@@ -268,6 +355,7 @@ export type SquadmembersDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | HomeDocument
+  | HoroscopeintroductionDocument
   | HoroscoperadDocument
   | SquadmembersDocument;
 
@@ -376,6 +464,8 @@ declare module "@prismicio/client" {
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
+      HoroscopeintroductionDocument,
+      HoroscopeintroductionDocumentData,
       HoroscoperadDocument,
       HoroscoperadDocumentData,
       SquadmembersDocument,

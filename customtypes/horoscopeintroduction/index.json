@@ -1,0 +1,67 @@
+{
+  "id": "horoscopeintroduction",
+  "label": "HoroscopeIntroduction",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "horoscopeimage": {
+        "type": "Image",
+        "config": {
+          "label": "horoscopeImage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "horoscopetitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "horoscopeTitle",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "abouthoroscope": {
+        "type": "Text",
+        "config": {
+          "label": "aboutHoroscope",
+          "placeholder": ""
+        }
+      },
+      "morestudents": {
+        "type": "StructuredText",
+        "config": {
+          "label": "moreStudents",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "memberimage": {
+        "type": "Image",
+        "config": {
+          "label": "memberImage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}
