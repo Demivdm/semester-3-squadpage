@@ -153,11 +153,7 @@ margin: auto;
     backface-visibility: hidden;
   }
 
-  .front-of-card {
-    background-color: #bbb;
-    color: black;
-    
-  }
+ 
   .top-card-img{
   
   overflow: hidden;
@@ -184,37 +180,7 @@ margin: auto;
     text-align: left;
     
   }
-  /* .member-cards{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 40vw;
-    margin: auto;
-  }
 
-
-  .back-of-card{
-    height: 423px;
-    width: 234px;
-  }
- .top-card-img{
-  
-  overflow: hidden;
-  width:100%;
-  height: 40%;
-  }
-  .top-card-img img{
-     
-    width: 100%;
-    position: relative;
-    top: -2em;
-  }
-
-  .front-of-card{
-   position: absolute;
-   z-index: 1;
-   
-  } */
 
   
 
