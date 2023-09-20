@@ -19,7 +19,8 @@
             "label": "rads",
             "select": "document",
             "customtypes": [
-              "horoscoperad"
+              "horoscoperad",
+              "horoscopeintroduction"
             ]
           }
         }

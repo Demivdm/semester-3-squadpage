@@ -5,8 +5,8 @@ export const prerender = true;
 export async function load({ fetch, request}) {
   const client = createClient({ fetch, request })
 
-  const document = await client.getByUID('home', 'home', {'fetchLinks': ['squadmembers.name', 'squadmembers.horoscope', 'squadmembers.age', 'squadmembers.memberimage','squadmembers.horoscopeimage', 'squadmembers.favoritecodelanguage', 'squadmembers.squad', 'squadmembers.profielcardlink']})
-
+  const document = await client.getByUID('home', 'home', {'fetchLinks': ['squadmembers.name', 'squadmembers.horoscope', 'squadmembers.age', 'squadmembers.memberimage','squadmembers.horoscopeimage', 'squadmembers.favoritecodelanguage', 'squadmembers.squad', 'squadmembers.profielcardlink', 'horoscoperad.uid','horoscoperad.title', 'horoscoperad.zodiacicon', 'horoscoperad.explanationtext', 'horoscoperad.horoscopecard']})
+  
   return document.data
   }
 
