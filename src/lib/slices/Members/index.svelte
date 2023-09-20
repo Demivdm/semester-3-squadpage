@@ -1,6 +1,7 @@
 <script>
   /** @type {import("@prismicio/client").Content.MembersSlice} */
   export let slice;
+  // dit is de standaard status van flipped. Het is nu standaard false en met een onclick wordt deze veranderd naar true waarbij de class flipped wordt geactiveerd
   let flipped = false;
  </script>
 
@@ -13,7 +14,8 @@
 <section >
   <div>{item.rads}</div>
 </section>
-
+<!-- hier zet ik een class met flipped op de main. ik zeg dat flipped geactiveerd moet worden met een onclick -->
+<!-- na de onclick wordt flipped getoggled naar true of false -->
 <main class:flipped on:click="{() => flipped = !flipped}">
 
     <section class="member-card">
@@ -139,6 +141,7 @@ margin: auto;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
+  /* hieronder gebruik ik een transform om de class flipped te draaien, door .member en .inner ook aan te roepen draaien ze mee met de flipped class */
 
   .flipped .member-card .inner-card {
     transform: rotateY(180deg);
