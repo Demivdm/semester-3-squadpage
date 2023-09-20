@@ -1,6 +1,7 @@
 <script>
   /** @type {import("@prismicio/client").Content.MembersSlice} */
   export let slice;
+  let flipped = false;
  </script>
 
 <section class="member-cards"
@@ -9,9 +10,12 @@
 >
 <!-- <h1>hoi </h1> -->
   {#each slice.items as item}
-<section>
+<section >
   <div>{item.rads}</div>
 </section>
+
+<main class:flipped on:click="{() => flipped = !flipped}">
+
     <section class="member-card">
      <div class="inner-card">
       <section class="front-of-card">
@@ -42,8 +46,10 @@
      
   </div>  
 </section>
+</main>
   {/each}
 </section>
+
 
 <style>
   :root {
@@ -99,8 +105,86 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  /* start kaartjes styling */
 
   .member-cards{
+  display: flex;
+  flex-wrap: wrap;
+width: 75vw;
+margin: auto;
+   justify-content: center;
+    
+  }
+
+  .member-card {
+    background-color: transparent;
+    height: 423px;
+    width: 234px;
+    perspective: 1000px;
+    cursor: pointer;
+    user-select: none;
+  display: flex;
+  align-self: center;
+    margin-top: 10em;
+    
+   
+   
+  }
+
+  .inner-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flipped .member-card .inner-card {
+    transform: rotateY(180deg);
+  }
+
+  .front-of-card,
+  .back-of-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .front-of-card {
+    background-color: #bbb;
+    color: black;
+    
+  }
+  .top-card-img{
+  
+  overflow: hidden;
+  width:100%;
+  height: 40%;
+  }
+  .top-card-img img{
+     
+     width: 100%;
+     position: relative;
+     top: -2em;
+   }
+
+  .back-of-card {
+   
+    height: 423px;
+    width: 234px;
+    border: 1px solid gold;
+    transform: rotateY(180deg);
+  }
+  ul > li{
+    color: white;
+    list-style-type: none;
+    text-align: left;
+    
+  }
+  /* .member-cards{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -130,7 +214,7 @@
    position: absolute;
    z-index: 1;
    
-  }
+  } */
 
   
 
