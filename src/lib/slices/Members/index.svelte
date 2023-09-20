@@ -3,55 +3,63 @@
   export let slice;
   // dit is de standaard status van flipped. Het is nu standaard false en met een onclick wordt deze veranderd naar true waarbij de class flipped wordt geactiveerd
   let flipped = false;
- </script>
+</script>
 
-<section class="member-cards"
+<section
+  class="member-cards"
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
 >
-<!-- <h1>hoi </h1> -->
+  <!-- <h1>hoi </h1> -->
   {#each slice.items as item}
+<<<<<<< HEAD
+    <!-- <section>
+      <div>{item.rads}</div>
+    </section> -->
+
+    <main class:flipped on:click={() => (flipped = !flipped)}>
+      <section class="member-card">
+        <div class="inner-card">
+          <section class="front-of-card">
+            <img
+              class="front-of-card"
+              src={item.squadmembers.data.horoscopeimage.url}
+              alt={item.squadmembers.data.horoscope}
+            />
+          </section>
+          <section class="back-of-card">
+            <h2>{item.squadmembers.data.name[0].text}</h2>
+            <div class="top-card-img">
+              <img
+                src={item.squadmembers.data.memberimage.url}
+                alt={item.squadmembers.data.name[0].text}
+              />
+            </div>
+=======
 <section >
   <div>{item.rads}</div>
 </section>
 <!-- hier zet ik een class met flipped op de main. ik zeg dat flipped geactiveerd moet worden met een onclick -->
 <!-- na de onclick wordt flipped getoggled naar true of false -->
 <main class:flipped on:click="{() => flipped = !flipped}">
+>>>>>>> 70ef25f6c23f4db378738a5dfbaf6acfc90e9987
 
-    <section class="member-card">
-     <div class="inner-card">
-      <section class="front-of-card">
-        <img class="front-of-card"
-      src={item.squadmembers.data.horoscopeimage.url}
-      alt={item.squadmembers.data.horoscope}
-    />
-      </section>
-      <section class="back-of-card">
-        <h2>{item.squadmembers.data.name[0].text}</h2>
-        <div class="top-card-img">
-          <img
-          src={item.squadmembers.data.memberimage.url}
-          alt={item.squadmembers.data.name[0].text}
-        />
+            <ul>
+              <li>{item.squadmembers.data.age}</li>
+              <li>{item.squadmembers.data.horoscope}</li>
+              <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
+            </ul>
+            <div class="button_container">
+              <a href={item.squadmembers.data.profielcardlink} class="button"
+                >Visitekaartje</a
+              >
+            </div>
+          </section>
         </div>
-          
-       <ul>
-        <li>{item.squadmembers.data.age}</li>
-        <li>{item.squadmembers.data.horoscope}</li>
-        <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
-       </ul>
-       <div class="button_container">
-        <a href={item.squadmembers.data.profielcardlink} class="button"
-          >Visitekaartje</a
-        >
-      </div>
-     
-  </div>  
-</section>
-</main>
+      </section>
+    </main>
   {/each}
 </section>
-
 
 <style>
   :root {
@@ -60,13 +68,16 @@
     --offwhite: #fffbea;
     --lightblue: #062968;
     background: url(sterren-achtergrond.jpg);
-   /* background-repeat: no-repeat; */
+    /* background-repeat: no-repeat; */
   }
 
   h1,
   h2 {
     font-family: "Elsie";
     color: var(--offwhite);
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   p {
@@ -109,13 +120,12 @@
   }
   /* start kaartjes styling */
 
-  .member-cards{
-  display: flex;
-  flex-wrap: wrap;
-width: 75vw;
-margin: auto;
-   justify-content: center;
-    
+  .member-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: auto;
+    justify-content: center;
   }
 
   .member-card {
@@ -125,12 +135,9 @@ margin: auto;
     perspective: 1000px;
     cursor: pointer;
     user-select: none;
-  display: flex;
-  align-self: center;
+    display: flex;
+    align-self: center;
     margin-top: 10em;
-    
-   
-   
   }
 
   .inner-card {
@@ -156,36 +163,28 @@ margin: auto;
     backface-visibility: hidden;
   }
 
- 
-  .top-card-img{
-  
-  overflow: hidden;
-  width:100%;
-  height: 40%;
+  .top-card-img {
+    overflow: hidden;
+    width: 100%;
+    height: 40%;
   }
-  .top-card-img img{
-     
-     width: 100%;
-     position: relative;
-     top: -2em;
-   }
+  .top-card-img img {
+    width: 100%;
+    position: relative;
+    top: -2em;
+  }
 
   .back-of-card {
-   
     height: 423px;
     width: 234px;
     border: 1px solid gold;
     transform: rotateY(180deg);
+    background: var(--darkblue);
   }
-  ul > li{
+  ul > li {
     color: white;
     list-style-type: none;
     text-align: left;
-    
+    font-family: "Montserrat";
   }
-
-
-  
-
-
 </style>
