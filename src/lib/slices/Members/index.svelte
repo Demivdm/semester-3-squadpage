@@ -36,9 +36,9 @@
               />
             </div>
 
-            <section>
+            <!-- <section>
               <div>{item.rads}</div>
-            </section>
+            </section> -->
             <!-- hier zet ik een class met flipped op de main. ik zeg dat flipped geactiveerd moet worden met een onclick -->
             <!-- na de onclick wordt flipped getoggled naar true of false -->
             <main class:flipped on:click={() => (flipped = !flipped)}>
