@@ -12,7 +12,7 @@
 >
   <!-- <h1>hoi </h1> -->
   {#each slice.items as item}
-<<<<<<< HEAD
+    <!-- <<<<<<< HEAD >>>>>> -->
     <!-- <section>
       <div>{item.rads}</div>
     </section> -->
@@ -35,25 +35,24 @@
                 alt={item.squadmembers.data.name[0].text}
               />
             </div>
-=======
-<section >
-  <div>{item.rads}</div>
-</section>
-<!-- hier zet ik een class met flipped op de main. ik zeg dat flipped geactiveerd moet worden met een onclick -->
-<!-- na de onclick wordt flipped getoggled naar true of false -->
-<main class:flipped on:click="{() => flipped = !flipped}">
->>>>>>> 70ef25f6c23f4db378738a5dfbaf6acfc90e9987
 
-            <ul>
-              <li>{item.squadmembers.data.age}</li>
-              <li>{item.squadmembers.data.horoscope}</li>
-              <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
-            </ul>
-            <div class="button_container">
-              <a href={item.squadmembers.data.profielcardlink} class="button"
-                >Visitekaartje</a
-              >
-            </div>
+            <section>
+              <div>{item.rads}</div>
+            </section>
+            <!-- hier zet ik een class met flipped op de main. ik zeg dat flipped geactiveerd moet worden met een onclick -->
+            <!-- na de onclick wordt flipped getoggled naar true of false -->
+            <main class:flipped on:click={() => (flipped = !flipped)}>
+              <ul>
+                <li>{item.squadmembers.data.age}</li>
+                <li>{item.squadmembers.data.horoscope}</li>
+                <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
+              </ul>
+              <div class="button_container">
+                <a href={item.squadmembers.data.profielcardlink} class="button"
+                  >Visitekaartje</a
+                >
+              </div>
+            </main>
           </section>
         </div>
       </section>
