@@ -23,12 +23,12 @@
       </svg></a
     >
   </div>
-  <h1>{data.uid}</h1>
+  <h1>Starlight deviners</h1>
   <section class="desktop-naast-elkaar">
     <section class="card-introduction">
       <img src="boogschutter-achterkant.png" class="card-back" />
       <div class="horoscope-introduction">
-        <h2>Boogschutter</h2>
+        <h2>{data.uid}</h2>
         <p>
           De levendige en openhartige Boogschutters zijn geboren natuurlijke
           leiders die achter alles aan gaan wat ze willen, ongeacht wat andere
