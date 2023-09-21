@@ -216,7 +216,8 @@
   .back-of-card {
     height: 423px;
     width: 234px;
-    border: 1px solid gold;
+    border: 3px solid var(--gold);
+    border-radius: 13px;
     transform: rotateY(180deg);
     background: var(--darkblue);
   }
