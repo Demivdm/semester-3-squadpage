@@ -70,7 +70,7 @@ function toggleCard(index) {
     --offwhite: #fffbea;
     --lightblue: #062968;
     background: url(sterren-achtergrond.jpg);
-    /* background-repeat: no-repeat; */
+    background: sticky;
   }
 
   h1,
@@ -101,6 +101,7 @@ function toggleCard(index) {
     width: 215px;
     height: 55px;
     margin: 0 auto;
+  position: absolute;
   }
 
   a.button {
@@ -129,6 +130,16 @@ function toggleCard(index) {
     margin: auto;
     margin-top: 10em;
     justify-content: center;
+    gap: 8;
+    padding: 1em;
+
+    /* display: grid;
+    grid-auto-flow: column;
+
+    overflow-y: scroll;
+    padding: 20px;
+    height: 600px;
+    width: 50vw; */
   }
 
   .member-card {
@@ -138,7 +149,17 @@ function toggleCard(index) {
     perspective: 1000px;
     cursor: pointer;
     display: flex;
+<<<<<<< Updated upstream
     margin: 1em;
+=======
+<<<<<<< HEAD
+    align-self: center;
+    padding: 1em;
+    /* margin-top: 10em; */
+=======
+    margin: 1em;
+>>>>>>> f25f072f7c61b8843fec2a44ad82846b84bad55f
+>>>>>>> Stashed changes
   }
 
   .inner-card {
