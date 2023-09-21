@@ -11,19 +11,15 @@
 >
   <article>hiii</article>
   {#each slice.items as item}
-    <a href="/{item.rads.slug}">
-      <div>
-        <p>{item.rads.data.title[0].text}</p>
+ <a href="/{item.rads.uid}">
+  <div>
+    <p>{item.rads.data.title[0].text}</p>
+  
+    <img src="{item.rads.data.zodiacicon.url }" alt="{item.rads.data.title[0].text}" width="60" height="60">
+  </div>
+</a> 
 
-        <img
-          src={item.rads.data.zodiacicon.url}
-          alt={item.rads.data.title[0].text}
-          width="60"
-          height="60"
-        />
-      </div>
-    </a>
-  {/each}
+ {/each}
 </section>
 
 <style>

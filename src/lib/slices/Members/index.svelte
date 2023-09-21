@@ -152,12 +152,10 @@
     cursor: pointer;
     display: flex;
     margin: 1em;
-
     align-self: center;
     padding: 1em;
-    /* margin-top: 10em; */
-
     margin: 1em;
+
   }
 
   .inner-card {
