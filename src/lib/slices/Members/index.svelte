@@ -2,65 +2,68 @@
   /** @type {import("@prismicio/client").Content.MembersSlice} */
   export let slice;
   // dit is de standaard status van flipped. Het is nu standaard false en met een onclick wordt deze veranderd naar true waarbij de class flipped wordt geactiveerd
-  let flipped = false;
+  // ik heb een array aangemaakt waar alle kaartjes in gaan
+  let flippedStates = new Array(slice.items.length).fill(false);
+
+// Functie om individuele kaartjes te flippen
+function toggleCard(index) {
+  flippedStates[index] = !flippedStates[index];
+}
 </script>
 
 <section
   class="member-cards"
   data-slice-type={slice.slice_type}
-  data-slice-variation={slice.variation}
->
+  data-slice-variation={slice.variation}>
   <!-- <h1>hoi </h1> -->
-  {#each slice.items as item}
+  {#each slice.items as item, index}
     <!-- <<<<<<< HEAD >>>>>> -->
     <!-- <section>
       <div>{item.rads}</div>
     </section> -->
 
-    <main class:flipped on:click={() => (flipped = !flipped)}>
-      <section class="member-card">
-        <div class="inner-card">
-          <section class="front-of-card">
+   <!-- hier geef ik een class met flipped mee en er wordt een status aan de array toegevoegd. Vervolgens wordt onclick de functie togglecard aangeroepen -->
+  <main class:flipped={flippedStates[index]} on:click={() => toggleCard(index)}>
+    <section class="member-card">
+      <div class="inner-card">
+        <section class="front-of-card">
+          <img
+            class="front-of-card"
+            src={item.squadmembers.data.horoscopeimage.url}
+            alt={item.squadmembers.data.horoscope}
+          />
+        </section>
+        <section class="back-of-card">
+          <h2>{item.squadmembers.data.name[0].text}</h2>
+          <div class="top-card-img">
             <img
-              class="front-of-card"
-              src={item.squadmembers.data.horoscopeimage.url}
-              alt={item.squadmembers.data.horoscope}
+              src={item.squadmembers.data.memberimage.url}
+              alt={item.squadmembers.data.name[0].text}
             />
-          </section>
-          <section class="back-of-card">
-            <h2>{item.squadmembers.data.name[0].text}</h2>
-            <div class="top-card-img">
-              <img
-                src={item.squadmembers.data.memberimage.url}
-                alt={item.squadmembers.data.name[0].text}
-              />
-            </div>
-
-            <!-- <section>
-              <div>{item.rads}</div>
-            </section> -->
-            <!-- hier zet ik een class met flipped op de main. ik zeg dat flipped geactiveerd moet worden met een onclick -->
-            <!-- na de onclick wordt flipped getoggled naar true of false -->
-            <main class:flipped on:click={() => (flipped = !flipped)}>
-              <ul>
-                <li>{item.squadmembers.data.age}</li>
-                <li>{item.squadmembers.data.horoscope}</li>
-                <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
-              </ul>
-              <div class="button_container">
-                <a href={item.squadmembers.data.profielcardlink} class="button"
-                  >Visitekaartje</a
-                >
-              </div>
-            </main>
-          </section>
-        </div>
-      </section>
-    </main>
-  {/each}
+          </div>
+          <!-- Flip the individual card -->
+          <ul>
+            <li>{item.squadmembers.data.age}</li>
+            <li>{item.squadmembers.data.horoscope}</li>
+            <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
+          </ul>
+          <div class="button_container">
+            <a href={item.squadmembers.data.profielcardlink} class="button"
+              >Visitekaartje</a
+            >
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+{/each}
 </section>
 
 <style>
+  body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
   :root {
     --gold: #e1c253;
     --darkblue: #061528;
@@ -122,8 +125,9 @@
   .member-cards {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
+    max-width: 80vw;
     margin: auto;
+    margin-top: 10em;
     justify-content: center;
   }
 
@@ -133,10 +137,8 @@
     width: 234px;
     perspective: 1000px;
     cursor: pointer;
-    user-select: none;
     display: flex;
-    align-self: center;
-    margin-top: 10em;
+    margin: 1em;
   }
 
   .inner-card {
