@@ -74,7 +74,6 @@
     --offwhite: #fffbea;
     --lightblue: #062968;
     background: url(sterren-achtergrond.jpg);
-    background: sticky;
   }
 
   h1,
