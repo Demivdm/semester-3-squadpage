@@ -5,16 +5,17 @@
   // ik heb een array aangemaakt waar alle kaartjes in gaan
   let flippedStates = new Array(slice.items.length).fill(false);
 
-// Functie om individuele kaartjes te flippen
-function toggleCard(index) {
-  flippedStates[index] = !flippedStates[index];
-}
+  // Functie om individuele kaartjes te flippen
+  function toggleCard(index) {
+    flippedStates[index] = !flippedStates[index];
+  }
 </script>
 
 <section
   class="member-cards"
   data-slice-type={slice.slice_type}
-  data-slice-variation={slice.variation}>
+  data-slice-variation={slice.variation}
+>
   <!-- <h1>hoi </h1> -->
   {#each slice.items as item, index}
     <!-- <<<<<<< HEAD >>>>>> -->
@@ -22,45 +23,48 @@ function toggleCard(index) {
       <div>{item.rads}</div>
     </section> -->
 
-   <!-- hier geef ik een class met flipped mee en er wordt een status aan de array toegevoegd. Vervolgens wordt onclick de functie togglecard aangeroepen -->
-  <main class:flipped={flippedStates[index]} on:click={() => toggleCard(index)}>
-    <section class="member-card">
-      <div class="inner-card">
-        <section class="front-of-card">
-          <img
-            class="front-of-card"
-            src={item.squadmembers.data.horoscopeimage.url}
-            alt={item.squadmembers.data.horoscope}
-          />
-        </section>
-        <section class="back-of-card">
-          <h2>{item.squadmembers.data.name[0].text}</h2>
-          <div class="top-card-img">
+    <!-- hier geef ik een class met flipped mee en er wordt een status aan de array toegevoegd. Vervolgens wordt onclick de functie togglecard aangeroepen -->
+    <main
+      class:flipped={flippedStates[index]}
+      on:click={() => toggleCard(index)}
+    >
+      <section class="member-card">
+        <div class="inner-card">
+          <section class="front-of-card">
             <img
-              src={item.squadmembers.data.memberimage.url}
-              alt={item.squadmembers.data.name[0].text}
+              class="front-of-card"
+              src={item.squadmembers.data.horoscopeimage.url}
+              alt={item.squadmembers.data.horoscope}
             />
-          </div>
-          <!-- Flip the individual card -->
-          <ul>
-            <li>{item.squadmembers.data.age}</li>
-            <li>{item.squadmembers.data.horoscope}</li>
-            <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
-          </ul>
-          <div class="button_container">
-            <a href={item.squadmembers.data.profielcardlink} class="button"
-              >Visitekaartje</a
-            >
-          </div>
-        </section>
-      </div>
-    </section>
-  </main>
-{/each}
+          </section>
+          <section class="back-of-card">
+            <h2>{item.squadmembers.data.name[0].text}</h2>
+            <div class="top-card-img">
+              <img
+                src={item.squadmembers.data.memberimage.url}
+                alt={item.squadmembers.data.name[0].text}
+              />
+            </div>
+            <!-- Flip the individual card -->
+            <ul>
+              <li>{item.squadmembers.data.age}</li>
+              <li>{item.squadmembers.data.horoscope}</li>
+              <li>{item.squadmembers.data.favoritecodelanguage[0].text}</li>
+            </ul>
+            <div class="button_container">
+              <a href={item.squadmembers.data.profielcardlink} class="button"
+                >Visitekaartje</a
+              >
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  {/each}
 </section>
 
 <style>
-  body{
+  body {
     overflow-x: hidden;
     box-sizing: border-box;
   }
@@ -101,7 +105,6 @@ function toggleCard(index) {
     width: 215px;
     height: 55px;
     margin: 0 auto;
-  position: absolute;
   }
 
   a.button {
@@ -149,17 +152,13 @@ function toggleCard(index) {
     perspective: 1000px;
     cursor: pointer;
     display: flex;
-<<<<<<< Updated upstream
     margin: 1em;
-=======
-<<<<<<< HEAD
+
     align-self: center;
     padding: 1em;
     /* margin-top: 10em; */
-=======
+
     margin: 1em;
->>>>>>> f25f072f7c61b8843fec2a44ad82846b84bad55f
->>>>>>> Stashed changes
   }
 
   .inner-card {
