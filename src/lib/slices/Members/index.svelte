@@ -140,8 +140,9 @@
 
   .arrow-down {
     text-align: center;
-    padding-top: 1.5em;
+    padding-top: 1.8em;
     stroke-width: 2px;
+    color: var(--offwhite);
   }
 
   /* start kaartjes styling */
