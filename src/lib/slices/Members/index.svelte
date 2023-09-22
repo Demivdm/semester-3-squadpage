@@ -87,7 +87,7 @@
     --darkblue: #061528;
     --offwhite: #fffbea;
     --lightblue: #062968;
-    background: url(sterren-achtergrond.jpg);
+    background: url(/static/sterren-achtergrond.jpg);
   }
 
   h1,
