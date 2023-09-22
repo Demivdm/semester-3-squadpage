@@ -5,7 +5,7 @@
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
-  * [Gebruik en installatie](## Gebruik en installatie)
+  * [Gebruik en installatie](#gebruik-en-installatie)
   * [Kenmerken](#kenmerken)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
