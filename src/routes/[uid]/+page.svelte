@@ -26,28 +26,18 @@
   <h1>Starlight deviners</h1>
   <section class="desktop-naast-elkaar">
     <section class="card-introduction">
-      <img src="boogschutter-achterkant.png" class="card-back" />
+      <img class="card-back" alt={data.horoscope} />
       <div class="horoscope-introduction">
         <h2>{data.uid}</h2>
         <p>
-          De levendige en openhartige Boogschutters zijn geboren natuurlijke
-          leiders die achter alles aan gaan wat ze willen, ongeacht wat andere
-          mensen van hen denken. Dit sterrenbeeld houdt van reizen en avontuur.
-          Boogschutter is een optimistisch, positief denkend teken dat
-          geassocieerd wordt met de zoektocht naar vrijheid van alle
-          beperkingen, evenals idealisme, religie en filosofie.
+          <!-- {item.horoscopeintroduction.data.horoscopeimage[0]} -->
         </p>
       </div>
     </section>
     <article class="students-same-horoscope">
       <h2>Studenten met hetzelde sterrenbeeld</h2>
       <div class="cards-front">
-        <img src="Squad2A-Demi.jpg" />
-        <img src="Squad2A-Maaike.jpg" />
-        <img src="Squad2A-Ralph.jpg" />
-        <img src="Squad2A-Sander.jpg" />
-        <img src="Squad2A-Sanne.jpg" />
-        <img src="Squad2A-Rosa.jpg" />
+        <img src={data.morestudents}/>
       </div>
     </article>
   </section>
@@ -59,7 +49,7 @@
     --darkblue: #061528;
     --offwhite: #fffbea;
     --lightblue: #062968;
-    background: url(sterren-achtergrond.jpg);
+    background-image: url(sterren-achtergrond.jpg);
   }
 
   main {
