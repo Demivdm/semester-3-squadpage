@@ -2,6 +2,13 @@
 
 ![Ontwerp zonder titel](https://github.com/Maaike0904/your-tribe-for-life-squad-page/assets/54691201/b8a93195-716e-42f3-870c-55fa8656e6fe)
 
+## Inhoudsopgave
+
+  * [Beschrijving](#beschrijving)
+  * [Gebruik en installatie](## Gebruik en installatie)
+  * [Kenmerken](#kenmerken)
+  * [Bronnen](#bronnen)
+  * [Licentie](#licentie)
 
 ## Beschrijving
 Tijdens dit project hebben Maaike, Duneya en Demi een squadpage gemaakt voor squad A. Deze pagina is speciaal ontworpen voor het weergeven van informatie over studenten binnen de squad. Het biedt een overzichtelijke en creatieve manier om de leden van squad A te presenteren op basis van sterrenbeeld. Hierdoor krijgen anderen snel inzicht in wie er in de squad zit.
