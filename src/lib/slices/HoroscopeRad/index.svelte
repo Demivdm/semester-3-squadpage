@@ -30,11 +30,7 @@
     margin: auto;
     height: 30vh;
     position: relative;
-    bottom: 2rem;
-    -webkit-animation: spin 12s linear infinite;
-    -moz-animation: spin 12s linear infinite;
-    animation: spin 12s linear infinite;
-    /* background-color: aqua; */
+    top: 4rem;
   }
   a {
     display: flex;
@@ -112,8 +108,12 @@
     }
   }
   @media only screen and (min-width: 600px) {
-    section {
-      height: 60vh;
-    }
+      section {
+    top: 0;
+    height: 60vh;
+    -webkit-animation: spin 12s linear infinite;
+    -moz-animation: spin 12s linear infinite;
+    animation: spin 12s linear infinite;
+  }
   }
 </style>

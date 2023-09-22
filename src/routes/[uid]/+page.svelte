@@ -199,6 +199,7 @@ a.back-button{
     height: 40px;
     padding: 10px 38px;
     margin: 8px 1px -42px 8.5px;
+    
     cursor: pointer;
     font-weight: bold;
     font-size: 19px;
