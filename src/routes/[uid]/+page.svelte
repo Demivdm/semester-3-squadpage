@@ -46,6 +46,7 @@
       </svg> Terug</a
     >
   </div>
+  <h1>Starlight deviners</h1>
   <section class="desktop-naast-elkaar">
     <section class="card-introduction">
       <img src="{data.page.horoscopecard.url}" alt="{data.page.title[0].text}" />  
@@ -92,7 +93,7 @@
     --darkblue: #061528;
     --offwhite: #fffbea;
     --lightblue: #062968;
-    background: url(sterren-achtergrond.jpg);
+    background-image: url(sterren-achtergrond.jpg);
   }
 
   main {

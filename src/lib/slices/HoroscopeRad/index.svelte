@@ -16,10 +16,11 @@
     <p>{item.rads.data.title[0].text}</p>
   
     <img src="{item.rads.data.zodiacicon.url }" alt="{item.rads.data.title[0].text}" width="60" height="60">
-  </div>
+ </div>
 </a> 
 
  {/each}
+
 </section>
 
 <style>
