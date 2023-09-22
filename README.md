@@ -50,6 +50,10 @@ Dit project is ontwikkeld met behulp van de volgende technologieën en services:
   
 ## Bronnen
 
+ * [Get started with Svelte in Prismic.io](https://prismic.io/docs/svelte)
+ * [Card flip]([https://prismic.io/docs/svelte](https://codesandbox.io/s/css-flip3d-card-with-two-images-svelte-2gl9c?file=/App.svelte))
+
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
