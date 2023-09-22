@@ -1,9 +1,7 @@
+# Squadpage README
+
 ![Ontwerp zonder titel](https://github.com/Maaike0904/your-tribe-for-life-squad-page/assets/54691201/b8a93195-716e-42f3-870c-55fa8656e6fe)
 
-
-Natuurlijk, hier is een voorbeeld van een README-bestand voor je Squadpage-project, inclusief de beschrijving, gebruik, kenmerken en installatie:
-
-# Squadpage README
 
 ## Beschrijving
 Dit project is een Squadpage, speciaal ontworpen voor het weergeven van informatie over studenten in een squad. Het biedt een overzichtelijke en gestructureerde manier om de leden van je squad te presenteren, waardoor anderen snel toegang hebben tot relevante informatie.
@@ -36,6 +34,7 @@ Om deze Squadpage te gebruiken, volg je eenvoudig de onderstaande stappen:
 ## Kenmerken
 Dit project is ontwikkeld met behulp van de volgende technologieën en services:
 - **Figma**: Een programma om een prototype van de site maken.
+- 
 - **Svelte**: Een moderne JavaScript-framework voor het bouwen van krachtige gebruikersinterfaces.
 
 - **Prismic.io**: Een headless CMS (Content Management System) dat het beheer van content vereenvoudigt en flexibel maakt.
