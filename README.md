@@ -1,38 +1,39 @@
-# create-svelte
+Natuurlijk, hier is een voorbeeld van een README-bestand voor je Squadpage-project, inclusief de beschrijving, gebruik, kenmerken en installatie:
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Squadpage README
 
-## Creating a project
+## Beschrijving
+Dit project is een Squadpage, speciaal ontworpen voor het weergeven van informatie over studenten in een squad. Het biedt een overzichtelijke en gestructureerde manier om de leden van je squad te presenteren, waardoor anderen snel toegang hebben tot relevante informatie.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Gebruik en installatie
+Om deze Squadpage te gebruiken, volg je eenvoudig de onderstaande stappen:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+1. Clone het project naar je lokale machine:
+   ```
+   git clone https://github.com/jouw-gebruikersnaam/squadpage.git
+   ```
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+2. Navigeer naar de projectdirectory:
+   ```
+   cd squadpage
+   ```
 
-## Developing
+3. Installeer de benodigde afhankelijkheden:
+   ```
+   npm install
+   ```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+4. Start de ontwikkelingsserver:
+   ```
+   npm run dev
+   ```
 
-```bash
-npm run dev
+5. Open je webbrowser en ga naar `http://localhost:5000` om de Squadpage te bekijken.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Kenmerken
+Dit project is ontwikkeld met behulp van de volgende technologieën en services:
+- **Figma**: Een programma om een prototype van de site maken.
+- **Svelte**: Een moderne JavaScript-framework voor het bouwen van krachtige gebruikersinterfaces.
 
-## Building
+- **Prismic.io**: Een headless CMS (Content Management System) dat het beheer van content vereenvoudigt en flexibel maakt.
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
