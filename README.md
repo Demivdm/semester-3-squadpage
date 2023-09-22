@@ -47,3 +47,9 @@ Dit project is ontwikkeld met behulp van de volgende technologieën en services:
 
 - **Prismic.io**: Een headless CMS (Content Management System) dat het beheer van content vereenvoudigt en flexibel maakt.
 
+  
+## Bronnen
+
+## Licentie
+
+This project is licensed under the terms of the [MIT license](./LICENSE).
