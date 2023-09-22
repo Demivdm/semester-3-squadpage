@@ -37,7 +37,7 @@
     <article class="students-same-horoscope">
       <h2>Studenten met hetzelde sterrenbeeld</h2>
       <div class="cards-front">
-        <img src={data.morestudents}/>
+        <img src={data.morestudents} />
       </div>
     </article>
   </section>
@@ -49,7 +49,7 @@
     --darkblue: #061528;
     --offwhite: #fffbea;
     --lightblue: #062968;
-    background-image: url(sterren-achtergrond.jpg);
+    background-image: url(/static/sterren-achtergrond.jpg);
   }
 
   main {
