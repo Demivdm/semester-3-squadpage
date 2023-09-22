@@ -4,7 +4,7 @@
 
 
 ## Beschrijving
-Tijdens dit project hebben Maaike, Duneya en Demi een squadpage gemaakt voor squad A. Deze pagina is speciaal ontworpen voor het weergeven van informatie over studenten in een squad. Het biedt een overzichtelijke en creatieve manier om de leden van je squad te presenteren op basis van sterrenbeeld. Hierdoor krijgen anderen snel inzicht in wie er in de squad zit.
+Tijdens dit project hebben Maaike, Duneya en Demi een squadpage gemaakt voor squad A. Deze pagina is speciaal ontworpen voor het weergeven van informatie over studenten binnen de squad. Het biedt een overzichtelijke en creatieve manier om de leden van squad A te presenteren op basis van sterrenbeeld. Hierdoor krijgen anderen snel inzicht in wie er in de squad zit.
 
 ## Gebruik en installatie
 Om deze Squadpage te gebruiken, volg je eenvoudig de onderstaande stappen:
@@ -35,7 +35,7 @@ Om deze Squadpage te gebruiken, volg je eenvoudig de onderstaande stappen:
 Dit project is ontwikkeld met behulp van de volgende technologieën en services:
 
 - **Figma**: Een programma om een prototype van de site maken.
-- 
+  
 - **Svelte**: Een moderne JavaScript-framework voor het bouwen van krachtige gebruikersinterfaces.
 
 - **Prismic.io**: Een headless CMS (Content Management System) dat het beheer van content vereenvoudigt en flexibel maakt.
