@@ -1,38 +1,42 @@
-# create-svelte
+# Squadpage README
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![Ontwerp zonder titel](https://github.com/Maaike0904/your-tribe-for-life-squad-page/assets/54691201/b8a93195-716e-42f3-870c-55fa8656e6fe)
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Beschrijving
+Tijdens dit project hebben Maaike, Duneya en Demi een squadpage gemaakt voor squad A. Deze pagina is speciaal ontworpen voor het weergeven van informatie over studenten binnen de squad. Het biedt een overzichtelijke en creatieve manier om de leden van squad A te presenteren op basis van sterrenbeeld. Hierdoor krijgen anderen snel inzicht in wie er in de squad zit.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Gebruik en installatie
+Om deze Squadpage te gebruiken, volg je eenvoudig de onderstaande stappen:
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+1. Clone het project naar je lokale machine:
+   ```
+   git clone https://github.com/jouw-gebruikersnaam/squadpage.git
+   ```
 
-## Developing
+2. Navigeer naar de projectdirectory:
+   ```
+   cd squadpage
+   ```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+3. Installeer de benodigde afhankelijkheden:
+   ```
+   npm install
+   ```
 
-```bash
-npm run dev
+4. Start de ontwikkelingsserver:
+   ```
+   npm run dev
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+5. Open je webbrowser en ga naar `http://localhost:5000` om de Squadpage te bekijken.
 
-## Building
+## Kenmerken
+Dit project is ontwikkeld met behulp van de volgende technologieën en services:
 
-To create a production version of your app:
+- **Figma**: Een programma om een prototype van de site maken.
+  
+- **Svelte**: Een moderne JavaScript-framework voor het bouwen van krachtige gebruikersinterfaces.
 
-```bash
-npm run build
-```
+- **Prismic.io**: Een headless CMS (Content Management System) dat het beheer van content vereenvoudigt en flexibel maakt.
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

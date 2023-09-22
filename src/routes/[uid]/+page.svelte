@@ -6,27 +6,27 @@
   export let data;
   // console.log(data);
   // console.log(data.members)
-// onMount(() => {
+  // onMount(() => {
 
-//   var elementsToShow = document.querySelectorAll('[value]');
-// // Loop through the selected elements
-// for (var i = 0; i < elementsToShow.length; i++) {
-//   var element = elementsToShow[i];
-  
+  //   var elementsToShow = document.querySelectorAll('[value]');
+  // // Loop through the selected elements
+  // for (var i = 0; i < elementsToShow.length; i++) {
+  //   var element = elementsToShow[i];
+
   // Check the value of the "data-show" attribute
-//   var showValue = element.getAttribute('value');
-//   console.log(showValue)
-//   // If the value is "true," display the element; otherwise, hide it
-//   if (showValue == 'schorpioen') {
-  
-//     element.style.display = 'block';
-//   }
-// }
+  //   var showValue = element.getAttribute('value');
+  //   console.log(showValue)
+  //   // If the value is "true," display the element; otherwise, hide it
+  //   if (showValue == 'schorpioen') {
+
+  //     element.style.display = 'block';
+  //   }
+  // }
 
   // console.log(horoscope)
   // }
 
-// });
+  // });
 </script>
 
 <main class="page-contaniar">
@@ -49,7 +49,7 @@
   <h1>Starlight deviners</h1>
   <section class="desktop-naast-elkaar">
     <section class="card-introduction">
-      <img src="{data.page.horoscopecard.url}" alt="{data.page.title[0].text}" />  
+      <img src={data.page.horoscopecard.url} alt={data.page.title[0].text} />
       <div class="horoscope-introduction">
         <h2>{data.page.title[0].text}</h2>
         <p>
@@ -61,30 +61,32 @@
       <h2>Studenten met hetzelde sterrenbeeld</h2>
       <section class="cards-container">
         {#each data.members as member}
-        <!-- if (member) -->
-       <section class="member-card" value="{member.data.horoscope}">
-          <section class="back-of-card">
-            <h2>{member.data.name[0].text}</h2>
-            <div class="top-card-img">
-              <img
-                src={member.data.memberimage.url}
-                alt={member.data.name[0].text}
-              />
-            </div>
-            <ul>
-              <li>{member.data.age}</li>
-              <li>{member.data.horoscope}</li>
-              <li>{member.data.favoritecodelanguage[0].text}</li>
-            </ul>
-            <div class="button_container">
-              <a href={member.data.profielcardlink} class="button"
-                >Visitekaartje</a
-              >
-            </div>
+          <!-- if (member) -->
+          <section class="member-card" value={member.data.horoscope}>
+            <section class="back-of-card">
+              <h2>{member.data.name[0].text}</h2>
+              <div class="top-card-img">
+                <img
+                  src={member.data.memberimage.url}
+                  alt={member.data.name[0].text}
+                />
+              </div>
+              <ul>
+                <li>{member.data.age}</li>
+                <li>{member.data.horoscope}</li>
+                <li>{member.data.favoritecodelanguage[0].text}</li>
+              </ul>
+              <div class="button_container">
+                <a href={member.data.profielcardlink} class="button"
+                  >Visitekaartje</a
+                >
+              </div>
+            </section>
           </section>
-        </section>
-
-{/each}
+        {/each}
+      </section>
+    </article>
+  </section>
 </main>
 
 <style>
@@ -93,7 +95,7 @@
     --darkblue: #061528;
     --offwhite: #fffbea;
     --lightblue: #062968;
-    background-image: url(sterren-achtergrond.jpg);
+    background-image: url(/static/background-stars.jpg);
   }
 
   main {
@@ -101,7 +103,6 @@
     max-width: 80vw;
     margin: auto;
   }
-  
 
   h1,
   h2 {
@@ -114,13 +115,13 @@
     font-family: "montserrat";
     color: var(--offwhite);
   }
-  
+
   .card-introduction {
     display: flex;
     flex-direction: column;
   }
-   .card-introduction img{
-   margin-top: 2rem;
+  .card-introduction img {
+    margin-top: 2rem;
   }
 
   .horoscope-introduction {
@@ -135,11 +136,10 @@
   img {
     width: 163px;
   }
-  .cards-container{
+  .cards-container {
     display: flex;
     flex-wrap: wrap;
   }
-
 
   .member-card {
     background-color: transparent;
@@ -152,7 +152,6 @@
     align-self: center;
     padding: 1em;
     margin: 1em;
-
   }
   .top-card-img {
     overflow: hidden;
@@ -192,7 +191,7 @@
     height: 55px;
     /* margin: 0 auto; */
   }
-a.back-button{
+  a.back-button {
     color: var(--darkblue);
     border: 1px solid var(--darkblue);
     width: 196px;
@@ -209,7 +208,7 @@ a.back-button{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
+  }
   a.button {
     color: var(--darkblue);
     border: 1px solid var(--darkblue);
@@ -244,9 +243,9 @@ a.back-button{
       grid-auto-flow: column;
       margin-top: 4rem;
     }
-    .card-introduction{
+    .card-introduction {
       display: grid;
-    grid-auto-flow: column;
+      grid-auto-flow: column;
     }
   }
 
