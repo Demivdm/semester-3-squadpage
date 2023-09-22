@@ -1,3 +1,6 @@
+![Ontwerp zonder titel](https://github.com/Maaike0904/your-tribe-for-life-squad-page/assets/54691201/b8a93195-716e-42f3-870c-55fa8656e6fe)
+
+
 Natuurlijk, hier is een voorbeeld van een README-bestand voor je Squadpage-project, inclusief de beschrijving, gebruik, kenmerken en installatie:
 
 # Squadpage README
